@@ -1,0 +1,21 @@
+{% extends "layouts/layouts.html" %}
+{% block head %}
+{{ parent() }}
+{% endblock %}
+{% block content %}
+<table>
+{% for product in products %}
+    <tr>
+        <td>
+            {{product.name}}
+        </td>
+        <td>
+            {{product.price}}
+        </td>
+        <td>
+            {{product.description}}
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}
